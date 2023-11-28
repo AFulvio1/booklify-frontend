@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import BookService from '../service/BookService';
+import BookService from '../../service/BookService';
 
-class CategoryComponent extends Component {
+class CategoryCardComponent extends Component {
 
     constructor(props) {
         super(props);
@@ -36,4 +36,4 @@ class CategoryComponent extends Component {
     }
 }
 
-export default CategoryComponent;
+export default CategoryCardComponent;

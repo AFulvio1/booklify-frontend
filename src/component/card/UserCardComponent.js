@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import UserService from '../service/UserService';
+import UserService from '../../service/UserService';
 
-class UserComponent extends Component {
+class UserCardComponent extends Component {
 
     constructor(props) {
         super(props);
@@ -42,4 +42,4 @@ class UserComponent extends Component {
     }
 }
 
-export default UserComponent;
+export default UserCardComponent;
