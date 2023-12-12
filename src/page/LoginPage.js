@@ -5,9 +5,9 @@ import LoginComponent from '../component/LoginComponent';
 
 const LoginPage = () => {
   return (
-    <div class="page">
+    <div className="page">
       <NavbarComponent />
-      <div class="container">
+      <div className="container">
         <h1>Login Page</h1>
         <LoginComponent />
       </div>

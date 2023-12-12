@@ -4,9 +4,9 @@ import FooterComponent from '../component/FooterComponent';
 
 const ContactPage = () => {
   return (
-    <div class="page">
+    <div className="page">
       <NavbarComponent />
-      <div class="container">
+      <div className="container">
         <h2>Contact us</h2>
       </div>
       <FooterComponent />

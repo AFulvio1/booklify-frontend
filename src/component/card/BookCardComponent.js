@@ -12,12 +12,12 @@ class BookCardComponent extends Component {
     }
     
     componentDidMount() {
-        BookService.getBook().then((response) => {
-
-            this.setState({book : response.data})
-
-            console.log(this.state.book)
-        });
+        fetch(BookService.getBook())
+            .then((response) => response.json())
+            .then((data) => {
+                this.setState({book : data});
+            })
+            .catch((error) => console.error('Error fetching data:', error));
     }
 
     render() {

@@ -7,9 +7,9 @@ import FooterComponent from '../component/FooterComponent';
 
 const HomePage = () => {
   return (
-    <div class="page">
+    <div className="page">
         <NavbarComponent />
-        <div class="container">
+        <div className="container">
           <UserCardComponent />
           <CategoryCardComponent />
           <BookCardComponent />

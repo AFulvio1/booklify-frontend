@@ -12,12 +12,12 @@ class CategoryCardComponent extends Component {
     }
     
     componentDidMount() {
-        BookService.getCategory().then((response) => {
-            
-                this.setState({category : response.data});
-
-                console.log(this.state.category);
-        });
+        fetch(BookService.getCategory())
+            .then((response) => response.json())
+            .then((data) => {
+                this.setState({category : data});
+            })
+            .catch((error) => console.error('Error fetching data:', error));
     }
 
     render() {

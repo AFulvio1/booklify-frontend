@@ -1,41 +1,33 @@
-import React, { useState } from 'react';
-import { Form, Button } from 'react-bootstrap';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
 
 const AdminComponent = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
 
-  const handleLogin = () => {
-    // Handle login logic here
-    console.log('Logging in with:', { username, password });
+  const navigate = useNavigate();
+
+  const handleAddBookClick = () => {
+    navigate('/admin/add-book');
+  };
+
+  const handleAddCategoryClick = () => {
+    navigate('/admin/add-category');
   };
 
   return (
-    <Form>
-      <Form.Group controlId="formUsername">
-        <Form.Label>Username</Form.Label>
-        <Form.Control
-          type="text"
-          placeholder="Enter your username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
-      </Form.Group>
-
-      <Form.Group controlId="formPassword">
-        <Form.Label>Password</Form.Label>
-        <Form.Control
-          type="password"
-          placeholder="Enter your password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-      </Form.Group>
-
-      <Button variant="primary" type="button" onClick={handleLogin}>
-        Login
-      </Button>
-    </Form>
+    <Container>
+      <Row>
+        <Col md={6} sm={12}>
+          <Button variant="primary" onClick={handleAddBookClick}>Add Book</Button>
+        </Col>
+        <Col md={6} sm={12}>
+          <Button variant="primary" onClick={handleAddCategoryClick}>Insert Category</Button>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

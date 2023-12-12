@@ -5,10 +5,10 @@ import AdminComponent from '../component/AdminComponent';
 
 const AdminPage = () => {
   return (
-    <div class="page">
+    <div className="page">
         <NavbarComponent />
-        <div class="container">
-            <h1>Sign Up Page</h1>
+        <div className="container">
+            <h1>Admin Page</h1>
             <AdminComponent />
         </div>
         <FooterComponent />

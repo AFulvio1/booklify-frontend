@@ -4,9 +4,9 @@ import FooterComponent from '../component/FooterComponent';
 
 const AboutPage = () => {
   return (
-    <div class="page">
+    <div className="page">
       <NavbarComponent />
-      <div class="container">
+      <div className="container">
         <h2>About us</h2>
       </div>
       <FooterComponent />

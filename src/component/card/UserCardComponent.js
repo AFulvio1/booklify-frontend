@@ -12,12 +12,12 @@ class UserCardComponent extends Component {
     }
     
     componentDidMount() {
-        UserService.getUser().then((response) => {
-            
-            this.setState({user : response.data})
-
-            console.log(this.state.user)
-        });
+        fetch(UserService.getUser())
+            .then((response) => response.json())
+            .then((data) => {
+                this.setState({user : data});
+            })
+            .catch((error) => console.error('Error fetching data:', error));
     }
 
     render() {

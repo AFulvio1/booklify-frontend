@@ -5,9 +5,9 @@ import BookTableComponent from '../component/table/BookTableComponent';
 
 const LibraryPage = () => {
   return (
-    <div class="page">
+    <div className="page">
       <NavbarComponent />
-      <div class="container">
+      <div className="container">
         <h2>Library</h2>
         <BookTableComponent />
       </div>

@@ -7,6 +7,8 @@ import ContactPage from './page/ContactPage';
 import LoginPage from './page/LoginPage';
 import SignUpPage from './page/SignUpPage';
 import AdminPage from './page/AdminPage';
+import AdminAddBookPage from './page/AdminAddBookPage';
+import AdminAddCategoryPage from './page/AdminAddCategoryPage';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         <Route path="/login" element={ <LoginPage/> } />
         <Route path="/signup" element={ <SignUpPage/> } />
         <Route path="/admin" element={ <AdminPage/> } />
+        <Route path="/admin/add-book" element={ <AdminAddBookPage/> } />
+        <Route path="/admin/add-category" element={ <AdminAddCategoryPage/> } />
       </Routes>
     </Router>
   );
